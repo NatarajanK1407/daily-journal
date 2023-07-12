@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+
+<p><%= homeStartingContents %></p>
+<% inputDataArray.forEach(element => { %>
+    <% var title = element.title;
+    var post = element.post; %>
+    <h1><%= title %></h1>
+    <p><%= post.substring(0,100) %> ... <a href="/posts/<%= title %>">Read More</a> </p>
+<% });%>
+
+
+<%- include('partials/footer'); -%>
